@@ -1,0 +1,145 @@
+/* GENERAL */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    color: white;
+}
+
+body {
+    /*
+    width: 800px;
+    margin: 0 auto;
+*/
+    background-color: #0C090A;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 0.5em;
+    background-color: #282828;
+}
+
+header,
+.nav,
+header section {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 5em;
+    height: 5em;
+    padding: 1em;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+
+/* MAIN SECTION */
+main article img {
+    width: 16em;
+    height: 24em;
+    margin: auto;
+}
+
+main section article h2,
+main section article p {
+    margin: .5em;
+}
+
+main h2 {
+    font-size: 1.2em;
+}
+
+
+
+
+main {
+  display: flex;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 90%;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main section img {
+  height: 460px;
+  transition: all 0.5s;
+  border-radius: 1em;
+  max-width: 310px;
+}
+
+main section img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+h1,
+h2 {
+    font-family: sans-serif;
+    color: white;
+}
+
+
+
+/* FILTER BUTTONS STYLE */
+.btn {
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 10px;
+}
+
+#myBtnContainer {
+    justify-content: center;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    background-color: #1b9bff;
+    color: white;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
