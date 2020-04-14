@@ -55,83 +55,59 @@ function showMovies(movies) {
 
 //--- FILTER BUTTONS ---//
 
-filterSelection("all")
-
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filterDiv");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-}
-
-function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-        }
-    }
-}
-
-function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-
-        for (var j = 0; j < btns.length; j++) {
-            btns[j].classList.remove("active");
-        }
-        this.classList.add("active");
-
-
-    });
-}
+//filterSelection("all")
+//
+//function filterSelection(c) {
+//    var x, i;
+//    x = document.getElementsByClassName("filterDiv");
+//    if (c == "all") c = "";
+//    for (i = 0; i < x.length; i++) {
+//        w3RemoveClass(x[i], "show");
+//        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+//    }
+//}
+//
+//function w3AddClass(element, name) {
+//    var i, arr1, arr2;
+//    arr1 = element.className.split(" ");
+//    arr2 = name.split(" ");
+//    for (i = 0; i < arr2.length; i++) {
+//        if (arr1.indexOf(arr2[i]) == -1) {
+//            element.className += " " + arr2[i];
+//        }
+//    }
+//}
+//
+//function w3RemoveClass(element, name) {
+//    var i, arr1, arr2;
+//    arr1 = element.className.split(" ");
+//    arr2 = name.split(" ");
+//    for (i = 0; i < arr2.length; i++) {
+//        while (arr1.indexOf(arr2[i]) > -1) {
+//            arr1.splice(arr1.indexOf(arr2[i]), 1);
+//        }
+//    }
+//    element.className = arr1.join(" ");
+//}
+//
+//// Add active class to the current button (highlight it)
+//var btnContainer = document.getElementById("myBtnContainer");
+//var btns = btnContainer.getElementsByClassName("btn");
+//for (var i = 0; i < btns.length; i++) {
+//    btns[i].addEventListener("click", function () {
+//
+//        for (var j = 0; j < btns.length; j++) {
+//            btns[j].classList.remove("active");
+//        }
+//        this.classList.add("active");
+//
+//
+//    });
+//}
 
 
 //------------------------------------- HTML ELEMENTEN VULLEN MET GEGEVENS JSON FILE -------------------------------------- //
-function showMovies(moviesjson) {
-    
-    for (item of moviesjson) { //Door de JSON nodes te loopen.
-        // Maak een section aan.
-        var section = document.createElement('section');
-        section.classList.add("movie");
-        // Voor elk item in tiem.genres de variable genre vullen met het genre.
-        for (let genre of item.genres) {
-            section.classList.add(genre);
-        }
-        // Maak een H1 aan voor de titel.
-        var titel = document.createElement('h1');
-        titel.textContent = item.title;
-        // Maak een div aan voor het plot.
-        var plot = document.createElement('div');
-        plot.textContent = item.plot;
-        
-        // Koppel de titel, img en p aan de section
-        section.appendChild(titel);
-        section.appendChild(cover);
-        section.appendChild(plot);
-        // Koppel de section aan de main.
-        main.appendChild(section);
-    }
-}
+
 
 
 
